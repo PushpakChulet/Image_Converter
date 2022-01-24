@@ -1,0 +1,15 @@
+While starting this project, I had a few points in my mind,
+like how to divide the image into equal parts, how to manage if one image comes out to be larger than the other one, and 
+how to align them with each other. 
+
+1. I read the image using the imread command and then got the size of input images
+using the size command. I divided the image using the size command into three parts.
+
+2. I considered the Green part as my benchmark and resized every other part to the size of the Green part using the imresize command.
+
+3. The images, when merged without processing, images were producing white mostly, and to overcome this issue, I used imregconfig("multimodal")
+and then compared the similarities in those three images taking green as the benchmark.
+
+I used the cat command to combine those three aligned images.
+
+The code can read images from the location specified by the user.
